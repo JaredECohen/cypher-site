@@ -32,52 +32,57 @@
     <div class="container">
         <a href="index.html" class="back-link">← Back to CYPHER</a>
         <h1>Privacy Policy</h1>
-        <div class="last-updated">Last Updated: October 3, 2026</div>
+        <div class="last-updated">Last Updated: October 4, 2026</div>
 
-        <p>This Privacy Policy describes how <strong>Cypher: Rap Battle Arena</strong> ("CYPHER", "we", "us", or "our") handles your information when you use our mobile application on iOS.</p>
+        <p>This policy explains how <strong>JEC Labs LLC</strong> ("CYPHER", "we", "us", or "our") handles information in <strong>Cypher: Rap Battle Arena</strong> for iOS.</p>
 
-        <h2>1. Overview & Core Privacy Principles</h2>
-        <p>We respect your privacy and creative freedom. CYPHER is designed so that you can freestyle, battle, and hone your lyrical craft without unnecessary personal data collection. Specifically:</p>
+        <h2>1. Overview</h2>
+        <p>CYPHER lets you record, battle, and practice rap. You do not need to create a CYPHER account. We do not sell personal information, use an advertising identifier, or track you across other companies' apps and websites for advertising. Some features process information through Apple and our cloud service providers, as described below.</p>
+
+        <h2>2. Recordings, Speech, and AI Features</h2>
         <ul>
-            <li>We <strong>do not sell</strong> your personal information or audio recordings.</li>
-            <li>We <strong>do not track</strong> you across third-party websites or applications for advertising purposes.</li>
-            <li>We do not require you to create an account, enter your email, or provide sensitive personal identifiers to use the app.</li>
+            <li><strong>Microphone and speech recognition:</strong> When you record, the app captures your voice for playback and transcription. CYPHER uses Apple's Speech framework. Depending on the device and service availability, Apple may process audio on your device or on its servers; CYPHER does not require all recognition to happen on-device. You control microphone and speech permissions in iOS Settings.</li>
+            <li><strong>Lyrics and gameplay:</strong> AI battles, judging, coaching, and lyric generation send prompts, transcribed verses, relevant battle context, and player names you provide through our Cloudflare gateway to OpenAI. Avoid including private information you do not want these services to process.</li>
+            <li><strong>Generated voices:</strong> AI-generated text is sent through our gateway to ElevenLabs or OpenAI to produce spoken audio. We do not send your microphone recordings to these voice-generation services.</li>
+            <li><strong>Saved content:</strong> Recordings, lyrics, battle results, preferences, and credit balances are stored locally by the app. Device backups may include app data according to your Apple backup settings. You can delete saved recordings in the Vault or remove the app's local data by deleting the app.</li>
+            <li><strong>Sharing:</strong> If you choose to share recordings, battle cards, or challenge links, the content you select is provided to the people or services you choose. Challenge links can contain player names and lyrics. Recipients and external services control their copies.</li>
         </ul>
 
-        <h2>2. Information We Collect and Process</h2>
-        <p>To provide core interactive features, CYPHER collects and processes the following categories of information:</p>
+        <h2>3. Purchases and Service Security</h2>
+        <p>Apple processes subscriptions and credit-pack purchases through StoreKit. The app uses purchase and entitlement information to provide purchased features. We do not receive your card number or bank details.</p>
+        <p>Requests to our Cloudflare gateway include an Apple-signed app receipt to verify that they come from a valid app installation. The gateway processes receipt identifiers and uses a hashed identifier for usage limits and abuse prevention. The receipt itself, lyrics, and audio are not stored in our gateway's D1 database. Cloudflare processes network information, including IP addresses and operational logs, to host and protect the service.</p>
+        <p>AI usage-limit counters expire after seven days and are removed by daily cleanup, normally within eight days. Separate analytics usage-limit counters expire after two days and are removed by daily cleanup, normally within three days.</p>
+
+        <h2 id="analytics">4. Optional Usage Analytics</h2>
+        <p><strong>Analytics is off until you choose to share it.</strong> Declining does not prevent you from using CYPHER. When enabled, analytics records screens and features used, activity steps, completion, cancellation, interruption and failure, subscription or credit-pack selections and purchase outcomes, and AI response times and error categories. Events include timestamps, app version/build, random identifiers for the current app session and activity, and whether the request is from Apple's test or production environment.</p>
+        <p>Analytics events do not contain your lyrics, prompts, audio recordings, player names, email address, purchase transaction IDs, or payment details. A new analytics session identifier is created when the app process launches; we do not create a persistent analytics profile identifying you across launches. Requests are authenticated with the app receipt, so our privacy disclosures conservatively treat authenticated usage and diagnostic data as linked to an installation even though the stored event table omits receipt-derived identifiers.</p>
+        <p>Cloudflare stores analytics on our behalf. Events expire after 30 days and are removed by daily cleanup, normally within 31 days. We may retain aggregate reports without session or activity identifiers to understand trends. Up to 200 unsent events may remain on your device for up to 24 hours while delivery is retried.</p>
+        <p><strong>Your choice:</strong> Open CYPHER → Settings → Share Usage Analytics to change this setting. Turning it off stops new collection and clears unsent events on your device. It does not recall events already sent; those expire under the schedule above. The analytics choice does not disable the processing needed for AI features you choose to use.</p>
+
+        <h2>5. Service Providers and Retention</h2>
+        <p>We use HTTPS when communicating with our gateway and providers. Provider processing and retention are governed by their applicable terms and privacy policies:</p>
         <ul>
-            <li><strong>Audio Recordings & Microphone Data:</strong> When you record a freestyle or battle verse, your device captures your vocal audio. Microphone access is requested only when you initiate recording. Audio is temporarily processed to provide live transcription and mixed with chosen backing beats if you choose to save the battle to your local Vault.</li>
-            <li><strong>Speech Recognition & Transcripts:</strong> Audio speech recognition is performed using Apple's on-device Speech Recognition Framework whenever possible. The transcribed lyrics are analyzed to generate contextual rhyming rebuttals and provide diagnostic rhythm coaching.</li>
-            <li><strong>In-App Purchases & Subscriptions:</strong> StoreKit 2 processes subscription entitlements and consumable Battle Credit Packs directly through Apple. We do not store or have access to your credit card or financial billing information.</li>
-            <li><strong>App Preferences & Usage Counters:</strong> On-device local storage (UserDefaults) maintains your chosen AI personas, audio preferences, and fair-use credit balances.</li>
+            <li><strong>Apple:</strong> App distribution, purchases, and speech recognition. See <a href="https://www.apple.com/legal/privacy/">Apple's privacy policy</a>.</li>
+            <li><strong>Cloudflare:</strong> Gateway hosting, receipt verification, abuse prevention, and optional analytics storage. See <a href="https://www.cloudflare.com/privacypolicy/">Cloudflare's privacy policy</a>. The database retention periods above do not describe Cloudflare's separate operational logs.</li>
+            <li><strong>OpenAI:</strong> Text generation, judging, coaching, and some generated speech. OpenAI states that API data is not used to train its models by default unless the customer opts in. Standard abuse-monitoring logs may be retained for up to 30 days, subject to its policies and exceptions. See <a href="https://developers.openai.com/api/docs/guides/your-data">OpenAI's API data controls</a>.</li>
+            <li><strong>ElevenLabs:</strong> Generated speech. ElevenLabs may retain submitted text and generated audio under its policies. We do not promise zero retention or that all provider model-improvement uses are disabled. See <a href="https://elevenlabs.io/privacy-policy">ElevenLabs' privacy policy</a>.</li>
         </ul>
+        <p>Deleting a local recording does not delete copies previously shared with other people or already processed by a service provider. We retain information when reasonably necessary to respond to support requests, comply with legal obligations, or protect the service.</p>
 
-        <h2>3. Third-Party Service Providers</h2>
-        <p>To deliver advanced generative rap capabilities, the app communicates securely with trusted cloud intelligence providers via HTTPS:</p>
-        <ul>
-            <li><strong>ElevenLabs:</strong> Used for high-fidelity neural voice synthesis of AI MC personas. Text lyrics are sent to ElevenLabs to generate spoken rap audio.</li>
-            <li><strong>OpenAI:</strong> Used for lyric generation, rhyme analysis, and diagnostic coaching. Text transcripts are sent to generate rap rebuttals and line improvements.</li>
-            <li><strong>Apple App Store / StoreKit:</strong> Manages subscription validation and consumable transactions securely.</li>
-        </ul>
-        <p>None of our third-party AI providers use your private battle verses or voice samples to train foundational public models without consent.</p>
+        <h2>6. Support and External Links</h2>
+        <p>If you contact us by email, we receive the address, message, and attachments you choose to send and use them to respond. External links, including affiliate links, open services governed by their own privacy policies. CYPHER's optional analytics does not collect your activity on those sites.</p>
 
-        <h2>4. Data Storage and Retention</h2>
-        <p>All saved battle recordings, transcripts, and custom Battle Cards are stored <strong>locally on your device</strong> in the app's sandboxed Documents directory. You have complete control to view, export, or permanently delete any recording at any time from within the Vault tab.</p>
+        <h2>7. Your Choices and Requests</h2>
+        <p>You can change analytics in the app, manage microphone and speech permissions in iOS Settings, delete local recordings in the Vault, and manage subscriptions through Apple. Contact us to request access, correction, or deletion of information we hold about you. Because stored analytics does not contain your name or contact information, we may be unable to identify particular events as yours.</p>
 
-        <h2>5. Children's Privacy</h2>
-        <p>CYPHER is not directed at children under the age of 13. We do not knowingly collect personal identifiable information from children under 13.</p>
+        <h2>8. Children's Privacy</h2>
+        <p>CYPHER is not directed at children under 13. We do not knowingly collect personal information from children under 13. Please contact us if you believe a child has provided personal information so we can investigate.</p>
 
-        <h2>6. Changes to this Privacy Policy</h2>
-        <p>We may update our Privacy Policy periodically. Any revisions will be published on this page with an updated "Last Updated" timestamp.</p>
-
-        <h2>7. Contact Us</h2>
-        <p>If you have any questions, concerns, or requests regarding this Privacy Policy or your data, please contact:</p>
+        <h2>9. Policy Updates and Contact</h2>
+        <p>We may update this policy as the app changes. Revisions appear here with an updated date.</p>
         <p><strong>JEC Labs LLC / Jared Cohen</strong><br>Email: <a href="mailto:info@jeclabsllc.com">info@jeclabsllc.com</a></p>
 
-        <footer>
-            <p>© 2026 Jared Cohen. All rights reserved.</p>
-        </footer>
+        <footer><p>© 2026 JEC Labs LLC. All rights reserved.</p></footer>
     </div>
 </body>
 </html>
